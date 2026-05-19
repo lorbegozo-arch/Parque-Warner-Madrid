@@ -1,0 +1,998 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fisify × Parque Warner Madrid · Plan de Acción · Piloto 4 meses</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --warner-navy: #0B1845;
+  --warner-blue: #1B3088;
+  --warner-blue-light: #2C4DBF;
+  --warner-yellow: #FFC72C;
+  --warner-yellow-bright: #FFD500;
+  --warner-red: #D52B1E;
+  --warner-cream: #FAF7F0;
+  --warner-paper: #FFFFFF;
+  --warner-ink: #0F172A;
+  --warner-gray: #64748B;
+  --warner-gray-light: #CBD5E1;
+  --warner-line: #E2E8F0;
+  --warner-success: #16A34A;
+  --warner-warning: #F59E0B;
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'Space Grotesk', monospace;
+  --container: 1200px;
+  --pad-x: clamp(1.2rem, 4vw, 3rem);
+  --radius: 12px;
+  --radius-lg: 20px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-sans); background: var(--warner-cream); color: var(--warner-ink); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+.container { max-width: var(--container); margin: 0 auto; padding: 0 var(--pad-x); }
+a { color: inherit; }
+
+/* NAV */
+.nav { position: sticky; top: 0; z-index: 100; background: rgba(11,24,69,0.96); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,199,44,0.18); padding: 0.9rem 0; color: #fff; }
+.nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.nav-brand { font-family: var(--font-display); font-size: 1.65rem; letter-spacing: 0.04em; color: #fff; }
+.nav-brand strong { color: var(--warner-yellow); }
+.nav-brand .x { color: var(--warner-yellow); margin: 0 0.4em; }
+.nav-meta { font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.72); }
+
+section { padding: clamp(3.5rem, 8vw, 6.5rem) 0; position: relative; }
+.section-num { font-family: var(--font-mono); font-size: 0.85rem; font-weight: 500; color: var(--warner-red); letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 0.8rem; display: inline-block; }
+.section-title { font-family: var(--font-display); font-size: clamp(2.2rem, 5.5vw, 4.4rem); line-height: 0.95; letter-spacing: 0.005em; color: var(--warner-navy); margin-bottom: 1.4rem; max-width: 28ch; }
+.section-title .y { color: var(--warner-yellow); }
+.section-lead { font-size: clamp(1.05rem, 1.4vw, 1.25rem); color: var(--warner-gray); max-width: 64ch; line-height: 1.55; }
+
+/* HERO */
+.hero { position: relative; background: linear-gradient(135deg, var(--warner-navy) 0%, var(--warner-blue) 100%); color: #fff; padding: clamp(6rem, 14vw, 11rem) 0 clamp(5rem, 11vw, 9rem); overflow: hidden; }
+.hero-bg { position: absolute; inset: 0; background: url('warner-hero.jpg') center 30% / cover no-repeat; opacity: 0.55; filter: saturate(1.15); pointer-events: none; z-index: 0; }
+.hero::before { content: ''; position: absolute; inset: 0; background: linear-gradient(105deg, rgba(11,24,69,0.88) 0%, rgba(11,24,69,0.7) 35%, rgba(11,24,69,0.32) 70%, rgba(11,24,69,0.18) 100%); pointer-events: none; z-index: 1; }
+.hero-bolt { position: absolute; top: -8%; right: -6%; width: 380px; height: 480px; background: var(--warner-yellow); clip-path: polygon(50% 0, 100% 38%, 60% 38%, 80% 100%, 0 56%, 40% 56%); opacity: 0.08; transform: rotate(8deg); pointer-events: none; }
+.hero-inner { position: relative; z-index: 2; }
+.hero-eyebrow { font-family: var(--font-mono); font-size: 0.88rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--warner-yellow); margin-bottom: 2rem; display: flex; align-items: center; gap: 0.6rem; }
+.hero-title { font-family: var(--font-display); font-size: clamp(3.5rem, 9vw, 7.5rem); line-height: 0.92; color: #fff; max-width: 16ch; margin-bottom: 1.4rem; letter-spacing: 0.005em; }
+.hero-subtitle { font-family: var(--font-mono); font-size: clamp(0.95rem, 1.3vw, 1.1rem); letter-spacing: 0.1em; text-transform: uppercase; color: var(--warner-yellow); margin-bottom: 3rem; }
+.hero-meta { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.4rem 2.5rem; padding-top: 2.4rem; border-top: 1px solid rgba(255,255,255,0.18); max-width: 850px; }
+.hero-meta-item h4 { font-family: var(--font-mono); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.55); margin-bottom: 0.4rem; }
+.hero-meta-item p { font-size: 1.02rem; font-weight: 500; color: #fff; }
+.hero-cta { display: inline-flex; margin-top: 3rem; padding: 1rem 2rem; background: var(--warner-yellow); color: var(--warner-navy); font-family: var(--font-mono); font-size: 0.85rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; border-radius: 100px; text-decoration: none; transition: transform 0.2s; }
+.hero-cta:hover { transform: translateY(-2px); }
+
+/* DIAGNOSTICO */
+.diag-kpis { display: grid; gap: 1.2rem; grid-template-columns: 1fr; margin-top: 3rem; }
+@media (min-width: 700px) { .diag-kpis { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1100px) { .diag-kpis { grid-template-columns: repeat(4, 1fr); } }
+.diag-kpi { background: #fff; border: 1px solid var(--warner-line); border-radius: var(--radius); padding: 1.8rem 1.5rem; position: relative; overflow: hidden; }
+.diag-kpi::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: var(--warner-yellow); }
+.diag-kpi .label { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--warner-red); font-weight: 600; }
+.diag-kpi .pct { font-family: var(--font-display); font-size: clamp(2.6rem, 4.5vw, 3.4rem); line-height: 1; color: var(--warner-navy); margin: 0.7rem 0; letter-spacing: 0.005em; }
+.diag-kpi p { font-size: 0.92rem; color: var(--warner-gray); line-height: 1.5; }
+.diag-kpi.placeholder { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 220px; background: repeating-linear-gradient(45deg, rgba(11,24,69,0.04), rgba(11,24,69,0.04) 10px, rgba(11,24,69,0.08) 10px, rgba(11,24,69,0.08) 20px); border: 2px dashed var(--warner-gray-light); }
+.diag-kpi.placeholder .ph-text { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--warner-gray); text-align: center; }
+.diag-kpi.placeholder .ph-icon { font-family: var(--font-display); font-size: 2.5rem; color: var(--warner-gray-light); margin-bottom: 0.5rem; }
+
+.roi-callout { background: var(--warner-navy); color: #fff; border-radius: var(--radius); padding: 2rem 2rem; margin-top: 3rem; display: grid; gap: 1.5rem; grid-template-columns: 1fr; align-items: center; position: relative; overflow: hidden; }
+@media (min-width: 760px) { .roi-callout { grid-template-columns: 2fr 1fr; } }
+.roi-callout::after { content: ''; position: absolute; right: -40px; top: 50%; width: 220px; height: 220px; background: var(--warner-yellow); clip-path: polygon(50% 0, 100% 38%, 60% 38%, 80% 100%, 0 56%, 40% 56%); opacity: 0.07; transform: translateY(-50%); }
+.roi-callout h3 { font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--warner-yellow); margin-bottom: 0.8rem; }
+.roi-callout .roi-headline { font-family: var(--font-display); font-size: clamp(1.7rem, 3vw, 2.3rem); line-height: 1.1; color: #fff; letter-spacing: 0.005em; }
+.roi-callout .roi-fit { text-align: center; font-family: var(--font-display); position: relative; z-index: 1; }
+.roi-callout .roi-fit .num { font-size: clamp(3.5rem, 7vw, 5.5rem); color: var(--warner-yellow); line-height: 1; letter-spacing: 0.005em; }
+.roi-callout .roi-fit .lbl { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.65); margin-top: 0.5rem; }
+
+/* BIO COMPACT (5 videos inside Tras la visita) */
+.bio-compact { margin-top: 4rem; }
+.bio-compact h3 { font-family: var(--font-display); font-size: clamp(1.8rem, 3.4vw, 2.6rem); color: var(--warner-navy); line-height: 1.05; letter-spacing: 0.005em; margin-bottom: 0.8rem; }
+.bio-compact .lead { font-size: 1.02rem; color: var(--warner-gray); max-width: 60ch; line-height: 1.55; margin-bottom: 2.5rem; }
+.bio-grid-c { display: grid; gap: 1.5rem; grid-template-columns: 1fr; }
+@media (min-width: 760px) { .bio-grid-c { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1100px) { .bio-grid-c { grid-template-columns: repeat(3, 1fr); } }
+.bioc { background: #fff; border: 1px solid var(--warner-line); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.2s, box-shadow 0.2s; }
+.bioc:hover { transform: translateY(-3px); box-shadow: 0 14px 32px -10px rgba(11,24,69,0.15); }
+.bioc-video { width: 100%; aspect-ratio: 16/10; background: var(--warner-navy); object-fit: cover; display: block; }
+.bioc-body { padding: 1.2rem 1.2rem 1.3rem; flex: 1; display: flex; flex-direction: column; gap: 0.5rem; }
+.bioc-head { display: flex; justify-content: space-between; align-items: center; gap: 0.4rem; }
+.bioc-id { font-family: var(--font-mono); font-size: 0.68rem; color: var(--warner-gray); letter-spacing: 0.06em; }
+.bioc-risk { font-family: var(--font-mono); font-size: 0.66rem; padding: 0.18rem 0.5rem; border-radius: 100px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; }
+.bioc-risk.critical { background: var(--warner-red); color: #fff; }
+.bioc-risk.high { background: var(--warner-warning); color: #fff; }
+.bioc-risk.medium { background: rgba(245,158,11,0.18); color: #B45309; }
+.bioc-risk.low { background: rgba(22,163,74,0.15); color: var(--warner-success); }
+.bioc h4 { font-family: var(--font-display); font-size: 1.2rem; color: var(--warner-navy); line-height: 1.1; letter-spacing: 0.005em; }
+.bioc-area { font-family: var(--font-mono); font-size: 0.7rem; color: var(--warner-blue); letter-spacing: 0.04em; text-transform: uppercase; }
+.bioc p { font-size: 0.85rem; color: var(--warner-gray); line-height: 1.5; }
+
+/* DE REACTIVO A 360 */
+.cambio-bg { background: var(--warner-cream); }
+.modelos { display: grid; gap: 2rem; grid-template-columns: 1fr; margin-top: 3rem; }
+@media (min-width: 900px) { .modelos { grid-template-columns: 1fr 1fr; } }
+.modelo-card { background: #fff; border-radius: var(--radius); padding: 2rem 1.8rem; border: 1px solid var(--warner-line); }
+.modelo-card.actual { border-top: 5px solid var(--warner-red); }
+.modelo-card.fisify { border-top: 5px solid var(--warner-yellow); }
+.modelo-label { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; margin-bottom: 0.5rem; }
+.modelo-card.actual .modelo-label { color: var(--warner-red); }
+.modelo-card.fisify .modelo-label { color: var(--warner-navy); }
+.modelo-card h3 { font-family: var(--font-display); font-size: 1.6rem; color: var(--warner-navy); margin-bottom: 1.5rem; line-height: 1.05; letter-spacing: 0.005em; }
+.flow-actual { font-family: var(--font-mono); font-size: 0.92rem; color: var(--warner-ink); line-height: 1.8; letter-spacing: 0.01em; padding: 1rem 0; border-top: 1px dashed var(--warner-line); border-bottom: 1px dashed var(--warner-line); }
+.flow-actual .arrow { color: var(--warner-red); margin: 0 0.4em; }
+.modelo-footer { margin-top: 1.5rem; font-size: 0.92rem; color: var(--warner-gray); }
+.modelo-footer strong { color: var(--warner-red); }
+.fisify-pillar { padding: 1.2rem 0; border-bottom: 1px solid var(--warner-line); display: flex; gap: 1rem; align-items: flex-start; }
+.fisify-pillar:last-child { border-bottom: 0; }
+.fisify-pillar .num { font-family: var(--font-display); font-size: 2.2rem; color: var(--warner-yellow); line-height: 0.9; letter-spacing: 0.02em; flex-shrink: 0; min-width: 40px; }
+.fisify-pillar h4 { font-family: var(--font-display); font-size: 1.15rem; color: var(--warner-navy); margin-bottom: 0.3rem; letter-spacing: 0.005em; }
+.fisify-pillar .when { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--warner-red); margin-bottom: 0.5rem; }
+.fisify-pillar p { font-size: 0.88rem; color: var(--warner-gray); line-height: 1.5; }
+.cambio-banner { background: var(--warner-navy); color: #fff; border-radius: var(--radius); padding: 1.4rem 2rem; margin-top: 2.5rem; text-align: center; font-family: var(--font-mono); font-size: 0.95rem; letter-spacing: 0.08em; text-transform: uppercase; }
+.cambio-banner strong { color: var(--warner-yellow); }
+
+/* ELEMENTOS ACTIVOS */
+.elementos-bg { background: #fff; }
+.fisio-block { background: #fff; border: 1px solid var(--warner-line); border-radius: var(--radius-lg); padding: clamp(1.8rem, 3vw, 2.6rem); box-shadow: 0 16px 40px -12px rgba(11,24,69,0.1); display: grid; gap: 2.2rem; align-items: center; grid-template-columns: 1fr; margin-top: 3rem; }
+@media (min-width: 700px) { .fisio-block { grid-template-columns: 200px 1fr; } }
+.fisio-block img { width: 200px; height: 200px; object-fit: cover; border-radius: 50%; border: 3px solid var(--warner-yellow); box-shadow: 0 12px 32px -8px rgba(11,24,69,0.18); justify-self: center; }
+.fisio-block .eyebrow { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--warner-red); font-weight: 600; }
+.fisio-block h3 { font-family: var(--font-display); font-size: clamp(1.7rem, 3vw, 2.3rem); color: var(--warner-navy); margin: 0.6rem 0 0.8rem; letter-spacing: 0.005em; line-height: 1.05; }
+.fisio-block .desc { font-size: 1rem; color: var(--warner-ink); line-height: 1.55; margin-bottom: 1.2rem; }
+.fisio-block ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+.fisio-block li { font-size: 0.92rem; color: var(--warner-ink); line-height: 1.5; }
+.fisio-block li::before { content: '·'; color: var(--warner-yellow); font-weight: 700; margin-right: 0.5rem; }
+
+.serv-title { margin-top: 4rem; margin-bottom: 2rem; font-family: var(--font-display); font-size: clamp(1.7rem, 3vw, 2.3rem); color: var(--warner-navy); letter-spacing: 0.005em; }
+.serv-grid { display: grid; gap: 1.3rem; grid-template-columns: 1fr; }
+@media (min-width: 700px) { .serv-grid { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1100px) { .serv-grid { grid-template-columns: repeat(3, 1fr); } }
+.serv { background: #fff; border: 1px solid var(--warner-line); border-radius: var(--radius); padding: 1.7rem 1.5rem; display: flex; flex-direction: column; gap: 0.5rem; transition: transform 0.2s, box-shadow 0.2s; }
+.serv:hover { transform: translateY(-3px); box-shadow: 0 14px 32px -10px rgba(11,24,69,0.12); }
+.serv-icon { font-family: var(--font-display); font-size: 1.8rem; color: var(--warner-yellow); line-height: 1; margin-bottom: 0.6rem; letter-spacing: 0.02em; }
+.serv h4 { font-family: var(--font-display); font-size: 1.3rem; color: var(--warner-navy); line-height: 1.05; letter-spacing: 0.005em; }
+.serv > p { font-size: 0.9rem; color: var(--warner-gray); line-height: 1.5; }
+.serv ul { list-style: none; padding: 0; margin-top: 0.6rem; display: flex; flex-direction: column; gap: 0.35rem; }
+.serv li { font-size: 0.86rem; color: var(--warner-ink); line-height: 1.45; padding-left: 1rem; position: relative; }
+.serv li::before { content: '·'; position: absolute; left: 0; color: var(--warner-yellow); font-weight: 700; }
+
+.app-section { margin-top: 4rem; background: var(--warner-navy); color: #fff; border-radius: var(--radius-lg); padding: clamp(2rem, 4vw, 3rem); display: grid; gap: 2rem; grid-template-columns: 1fr; }
+@media (min-width: 900px) { .app-section { grid-template-columns: 1fr 1fr; } }
+.app-section .eyebrow { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--warner-yellow); }
+.app-section h3 { font-family: var(--font-display); font-size: clamp(1.6rem, 2.8vw, 2.1rem); color: #fff; margin: 0.6rem 0 1rem; letter-spacing: 0.005em; line-height: 1.05; }
+.app-section ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+.app-section li { font-size: 0.92rem; color: rgba(255,255,255,0.84); line-height: 1.5; padding-left: 1.2rem; position: relative; }
+.app-section li::before { content: '✓'; position: absolute; left: 0; color: var(--warner-yellow); font-weight: 700; }
+
+/* ROADMAP */
+.roadmap-bg { background: var(--warner-cream); }
+.fases-grid { margin-top: 3rem; display: flex; flex-direction: column; gap: 1.5rem; }
+.fase { background: #fff; border: 1px solid var(--warner-line); border-radius: var(--radius); padding: 2rem 1.8rem; display: grid; gap: 1.5rem; grid-template-columns: 1fr; align-items: start; position: relative; overflow: hidden; }
+@media (min-width: 760px) { .fase { grid-template-columns: 80px 1fr; } }
+.fase::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 5px; background: var(--warner-yellow); }
+.fase-num { font-family: var(--font-display); font-size: clamp(3.5rem, 5vw, 4.5rem); color: var(--warner-yellow); line-height: 1; letter-spacing: 0.005em; }
+.fase-body h3 { font-family: var(--font-display); font-size: 1.5rem; color: var(--warner-navy); margin-bottom: 0.5rem; letter-spacing: 0.005em; line-height: 1.05; }
+.fase-body > p { font-size: 0.95rem; color: var(--warner-gray); line-height: 1.55; margin-bottom: 1.2rem; }
+.fase-cols { display: grid; gap: 1.5rem; grid-template-columns: 1fr; margin-bottom: 1rem; }
+@media (min-width: 760px) { .fase-cols { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1100px) { .fase-cols.three { grid-template-columns: repeat(3, 1fr); } }
+.fase-col h5 { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--warner-red); margin-bottom: 0.6rem; font-weight: 600; }
+.fase-col ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.4rem; }
+.fase-col li { font-size: 0.85rem; color: var(--warner-ink); line-height: 1.45; padding-left: 1rem; position: relative; }
+.fase-col li::before { content: '·'; position: absolute; left: 0; color: var(--warner-yellow); font-weight: 700; }
+.fase-tag { display: inline-block; margin-top: 0.6rem; padding: 0.35rem 0.8rem; background: var(--warner-navy); color: var(--warner-yellow); font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; border-radius: 100px; font-weight: 600; }
+.fase-split { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+.fase-split-card { background: var(--warner-cream); border-radius: 8px; padding: 0.9rem 1rem; text-align: center; }
+.fase-split-card .pct { font-family: var(--font-display); font-size: 1.6rem; color: var(--warner-navy); line-height: 1; }
+.fase-split-card .l { font-family: var(--font-mono); font-size: 0.7rem; color: var(--warner-gray); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 0.3rem; }
+.fase-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-top: 0.5rem; }
+.fase-chip { background: var(--warner-cream); color: var(--warner-navy); padding: 0.3rem 0.7rem; border-radius: 100px; font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.04em; border: 1px solid var(--warner-line); }
+
+/* METRICAS */
+.metricas-bg { background: var(--warner-navy); color: #fff; }
+.metricas-bg .section-title { color: #fff; }
+.metricas-bg .section-lead { color: rgba(255,255,255,0.72); }
+.roi-table { margin-top: 3rem; display: grid; gap: 1.4rem; grid-template-columns: 1fr; }
+@media (min-width: 760px) { .roi-table { grid-template-columns: 1fr 1fr; } }
+.roi-row { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,199,44,0.18); border-radius: var(--radius); padding: 1.8rem 1.6rem; display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; }
+.roi-row-left .when { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--warner-yellow); margin-bottom: 0.4rem; font-weight: 600; }
+.roi-row-left h4 { font-family: var(--font-display); font-size: 1.3rem; color: #fff; letter-spacing: 0.005em; margin-bottom: 0.4rem; line-height: 1.1; }
+.roi-row-left p { font-size: 0.88rem; color: rgba(255,255,255,0.7); }
+.roi-mult { font-family: var(--font-display); font-size: clamp(3rem, 5vw, 4rem); color: var(--warner-yellow); line-height: 1; letter-spacing: 0.005em; }
+
+/* INVERSIÓN */
+.inversion-bg { background: var(--warner-cream); }
+.tier-grid { display: grid; gap: 1.5rem; grid-template-columns: 1fr; margin-top: 3rem; }
+@media (min-width: 760px) { .tier-grid { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1100px) { .tier-grid { grid-template-columns: repeat(4, 1fr); } }
+.tier-card { background: #fff; border: 1px solid var(--warner-line); border-radius: var(--radius); padding: 1.8rem 1.5rem; display: flex; flex-direction: column; position: relative; overflow: hidden; transition: transform 0.2s, box-shadow 0.2s; }
+.tier-card:hover { transform: translateY(-4px); box-shadow: 0 18px 40px -12px rgba(11,24,69,0.18); }
+.tier-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: var(--warner-yellow); }
+.tier-name { font-family: var(--font-display); font-size: 1.8rem; color: var(--warner-navy); letter-spacing: 0.005em; margin-bottom: 0.3rem; }
+.tier-cad { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--warner-red); font-weight: 600; margin-bottom: 1.4rem; }
+.tier-totals { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin-bottom: 1.4rem; padding-bottom: 1.4rem; border-bottom: 1px dashed var(--warner-line); }
+.tier-tot-val { font-family: var(--font-display); font-size: 1.3rem; color: var(--warner-navy); line-height: 1; }
+.tier-tot-lbl { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--warner-gray); margin-top: 0.25rem; }
+.tier-total-big { font-family: var(--font-display); font-size: clamp(2rem, 3.5vw, 2.6rem); color: var(--warner-navy); line-height: 1; letter-spacing: 0.005em; margin-bottom: 0.3rem; }
+.tier-total-big small { font-family: var(--font-sans); font-size: 0.85rem; font-weight: 400; color: var(--warner-gray); display: block; margin-top: 0.4rem; letter-spacing: 0; }
+.tier-feats-h { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--warner-red); margin-bottom: 0.8rem; font-weight: 600; }
+.tier-feats { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.55rem; flex: 1; }
+.tier-feats li { font-size: 0.85rem; color: var(--warner-ink); line-height: 1.45; padding-left: 1.4rem; position: relative; }
+.tier-feats li::before { content: '✓'; position: absolute; left: 0; top: 0; color: var(--warner-yellow); font-weight: 700; }
+.tier-feats li .sub { display: block; font-family: var(--font-mono); font-size: 0.7rem; color: var(--warner-gray); margin-top: 0.1rem; letter-spacing: 0.02em; }
+
+/* COMPROMISO */
+.compromiso-bg { background: var(--warner-cream); padding: clamp(4rem, 8vw, 6rem) 0; }
+.compromiso-statement { max-width: 720px; margin: 0 auto; text-align: center; font-family: var(--font-display); font-size: clamp(1.7rem, 3.3vw, 2.5rem); line-height: 1.15; color: var(--warner-navy); letter-spacing: 0.005em; margin-bottom: 2rem; }
+.compromiso-statement em { color: var(--warner-red); font-style: normal; }
+.compromiso-text { max-width: 720px; margin: 0 auto; text-align: center; font-size: 1.05rem; color: var(--warner-gray); line-height: 1.6; }
+.compromiso-card { max-width: 540px; margin: 3rem auto 0; background: #fff; border-radius: var(--radius-lg); padding: 2rem; border: 1px solid var(--warner-line); text-align: center; }
+.compromiso-card .signature { font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--warner-gray); margin-bottom: 0.5rem; }
+.compromiso-card .names { font-family: var(--font-display); font-size: 1.7rem; color: var(--warner-navy); letter-spacing: 0.01em; }
+
+/* FOOTER */
+.footer { background: var(--warner-navy); color: rgba(255,255,255,0.6); padding: 3rem 0; text-align: center; font-size: 0.85rem; border-top: 4px solid var(--warner-yellow); }
+.footer strong { color: var(--warner-yellow); }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <div class="nav-brand"><strong>Fisify</strong><span class="x">×</span>Parque Warner Madrid</div>
+    <div class="nav-meta">Plan de Acción · Piloto 4 meses</div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-bolt"></div>
+  <div class="container hero-inner">
+    <div class="hero-eyebrow">Fisify <span style="color:#fff;opacity:0.5">×</span> Parque Warner Madrid</div>
+    <h1 class="hero-title">Plan de <span class="y">Acción.</span></h1>
+    <div class="hero-subtitle">Piloto 4 meses · Programa de Salud Física</div>
+    <a href="#diagnostico" class="hero-cta">Descubre el plan ↓</a>
+
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <h4>Destinatario</h4>
+        <p>Carlos Ramos · Carlos Gutiérrez<br><span style="color:rgba(255,255,255,0.6);font-size:0.9rem">PRL · Parque Warner Madrid</span></p>
+      </div>
+      <div class="hero-meta-item">
+        <h4>Fuentes</h4>
+        <p>Informe FREMAP 2025<br>Visita presencial 14 mayo<br>Reunión PRL 23 abril</p>
+      </div>
+      <div class="hero-meta-item">
+        <h4>Autores</h4>
+        <p>Laura López · Iñaki Markinez</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- 1. FASE DE DIAGNÓSTICO -->
+<section id="diagnostico">
+  <div class="container">
+    <p class="section-num">Fase de Diagnóstico</p>
+    <h2 class="section-title">Tras nuestra visita, <span class="y">descubrimos que…</span></h2>
+    <p class="section-lead">Cuatro vectores confirman que el plan es ejecutable y que el impacto será visible en 12 meses.</p>
+
+    <div class="diag-kpis">
+      <div class="diag-kpi">
+        <div class="label">Alineamiento</div>
+        <div class="pct">100%</div>
+        <p>Dirección y los dos Carlos comprometidos desde el primer día. El comité ya tiene la reducción de absentismo como prioridad.</p>
+      </div>
+      <div class="diag-kpi">
+        <div class="label">Plantilla adecuada</div>
+        <div class="pct">100%</div>
+        <p>1.046 trabajadores en pico estival. 50,7% del problema concentrado en dos puestos (camareros sala + operadores atracciones).</p>
+      </div>
+      <div class="diag-kpi">
+        <div class="label">Canal comunicativo</div>
+        <div class="pct">100%</div>
+        <p>Los supervisores ya son el nodo de bajas, adaptaciones y servicio médico. Vehículo natural para hacer llegar el programa.</p>
+      </div>
+      <div class="diag-kpi placeholder">
+        <div class="ph-icon">⌷</div>
+        <div class="ph-text">Espacios y operativa<br><span style="font-size:0.65rem; opacity:0.7;">Imagen del espacio del fisio pendiente</span></div>
+      </div>
+    </div>
+
+    <div class="roi-callout">
+      <div>
+        <h3>ROI & Business Case</h3>
+        <p class="roi-headline">Absentismo Warner <strong style="color: var(--warner-yellow);">10,32%</strong> vs sector restauración 5,39% — <strong style="color: var(--warner-yellow);">×2,7</strong>. El problema no es estructural del sector, es específico de Warner.</p>
+      </div>
+      <div class="roi-fit">
+        <div class="num">95%</div>
+        <div class="lbl">Fit con el servicio</div>
+      </div>
+    </div>
+
+    <!-- BIO COMPACT (5 videos) -->
+    <div class="bio-compact">
+      <h3>Lo que vimos en los puestos críticos</h3>
+      <p class="lead">Cinco secuencias grabadas durante la visita del 14 de mayo. Análisis biomecánico del gesto, patología predicha y tipo de error. Vídeos a velocidad real, sin audio.</p>
+
+      <div class="bio-grid-c">
+        <article class="bioc">
+          <video class="bioc-video" src="videos/IMG_2350.mp4" poster="posters/IMG_2350.jpg" autoplay muted loop playsinline preload="metadata"></video>
+          <div class="bioc-body">
+            <div class="bioc-head">
+              <span class="bioc-id">01 · Almacén</span>
+              <span class="bioc-risk critical">Crítico</span>
+            </div>
+            <h4>Levantamiento de caja con torsión lumbar</h4>
+            <div class="bioc-area">Almacén · picking</div>
+            <p>Carga voluminosa con torsión de tronco sin pivotar pies. Lumbar L4-L5 en riesgo agudo.</p>
+          </div>
+        </article>
+
+        <article class="bioc">
+          <video class="bioc-video" src="videos/IMG_2353.mp4" poster="posters/IMG_2353.jpg" autoplay muted loop playsinline preload="metadata"></video>
+          <div class="bioc-body">
+            <div class="bioc-head">
+              <span class="bioc-id">02 · Almacén</span>
+              <span class="bioc-risk low">Referencia</span>
+            </div>
+            <h4>Operación de traspaleta eléctrica</h4>
+            <div class="bioc-area">Almacén · economato</div>
+            <p>Postura neutra, manejo ergonómico correcto. Patrón a replicar en el resto de operaciones.</p>
+          </div>
+        </article>
+
+        <article class="bioc">
+          <video class="bioc-video" src="videos/IMG_2355.mp4" poster="posters/IMG_2355.jpg" autoplay muted loop playsinline preload="metadata"></video>
+          <div class="bioc-body">
+            <div class="bioc-head">
+              <span class="bioc-id">03 · Atracción</span>
+              <span class="bioc-risk critical">Crítico</span>
+            </div>
+            <h4>Comprobación de arnés con brazos elevados</h4>
+            <div class="bioc-area">Operaciones · atracción</div>
+            <p>Hombros >90°, extensión cervical, ~16h/turno acumuladas. Tendinopatía supraespinoso y cervicalgia.</p>
+          </div>
+        </article>
+
+        <article class="bioc">
+          <video class="bioc-video" src="videos/IMG_2361.mp4" poster="posters/IMG_2361.jpg" autoplay muted loop playsinline preload="metadata"></video>
+          <div class="bioc-body">
+            <div class="bioc-head">
+              <span class="bioc-id">04 · Atracción</span>
+              <span class="bioc-risk critical">Crítico</span>
+            </div>
+            <h4>Arneses con flexión lumbar y alcance cruzado</h4>
+            <div class="bioc-area">Operaciones · embarque</div>
+            <p>~2.000 flexiones profundas por turno en pico. Hernia discal L4-L5 con riesgo elevado de lumbago.</p>
+          </div>
+        </article>
+
+        <article class="bioc">
+          <video class="bioc-video" src="videos/IMG_2365.mp4" poster="posters/IMG_2365.jpg" autoplay muted loop playsinline preload="metadata"></video>
+          <div class="bioc-body">
+            <div class="bioc-head">
+              <span class="bioc-id">05 · Restauración</span>
+              <span class="bioc-risk medium">Medio</span>
+            </div>
+            <h4>Producción en línea con bipedestación prolongada</h4>
+            <div class="bioc-area">Restauración · zona caliente</div>
+            <p>Turnos largos sin alternancia postural. Fascitis plantar, insuficiencia venosa, cervicobraquialgia.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. EL CAMBIO -->
+<section class="cambio-bg">
+  <div class="container">
+    <p class="section-num">El Cambio</p>
+    <h2 class="section-title">De Reactivo <span class="y">a 360</span></h2>
+    <p class="section-lead">El modelo que funciona en PreZero, Meliá, Repsol, Eroski, Laboral Kutxa, DIA, Musgrave y otros. Adaptado a Warner.</p>
+
+    <div class="modelos">
+      <div class="modelo-card actual">
+        <div class="modelo-label">Modelo Actual</div>
+        <h3>Empleado con dolor → baja → mutua</h3>
+        <div class="flow-actual">Empleado tiene dolor <span class="arrow">→</span> Aguanta <span class="arrow">→</span> Empeora <span class="arrow">→</span> Baja FREMAP <span class="arrow">→</span> Mutua <span class="arrow">→</span> Meses fuera</div>
+        <p class="modelo-footer"><strong>24.763 días perdidos en 2025</strong> · 417k€ directo + indirecto · equipos desbordados</p>
+      </div>
+
+      <div class="modelo-card fisify">
+        <div class="modelo-label">Modelo Fisify 360</div>
+        <h3>Tres anillos que se refuerzan</h3>
+
+        <div class="fisify-pillar">
+          <div class="num">1</div>
+          <div>
+            <h4>Prevención</h4>
+            <div class="when">Antes del dolor</div>
+            <p>Empleado sano → App + ejercicios → Clases grupales → Se mantiene sano.</p>
+          </div>
+        </div>
+        <div class="fisify-pillar">
+          <div class="num">2</div>
+          <div>
+            <h4>Detección temprana</h4>
+            <div class="when">Primeras molestias</div>
+            <p>Empleado con molestia → Chat o cita rápida → Plan personalizado → Sin baja.</p>
+          </div>
+        </div>
+        <div class="fisify-pillar">
+          <div class="num">3</div>
+          <div>
+            <h4>Recuperación acelerada</h4>
+            <div class="when">Si hay lesión</div>
+            <p>Empleado lesionado → Tratamiento intensivo → Seguimiento diario → Vuelve antes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cambio-banner">Sin bajas largas · Equipos productivos · Recuperación <strong>×3</strong> más rápida</div>
+  </div>
+</section>
+
+<!-- 3. ELEMENTOS ACTIVOS -->
+<section class="elementos-bg">
+  <div class="container">
+    <p class="section-num">Durante todo el programa</p>
+    <h2 class="section-title">Elementos <span class="y">Activos</span></h2>
+    <p class="section-lead">Servicios y herramientas disponibles desde el día 1 hasta el final del piloto.</p>
+
+    <!-- Fisio asignado -->
+    <div class="fisio-block">
+      <img src="david.jpg" alt="David · fisioterapeuta asignado al programa Warner" />
+      <div>
+        <div class="eyebrow">Vuestro fisioterapeuta</div>
+        <h3>Fisioterapeuta asignado</h3>
+        <p class="desc">Vuestro fisioterapeuta de referencia durante todo el programa, disponible tanto en sesiones presenciales como de forma digital.</p>
+        <ul>
+          <li>Colegiado con experiencia en sector ocio, restauración y operaciones</li>
+          <li>Conoce vuestro caso en detalle</li>
+          <li>Disponible presencialmente en el parque</li>
+          <li>Accesible por videollamada y chat</li>
+          <li>Seguimiento personalizado continuo</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Servicios Clave -->
+    <h3 class="serv-title">Servicios Clave</h3>
+    <div class="serv-grid">
+      <div class="serv">
+        <div class="serv-icon">◉</div>
+        <h4>Fisioterapia Presencial</h4>
+        <p>Servicio de fisioterapia dentro del parque con fisioterapeutas colegiados.</p>
+        <ul>
+          <li>Sesiones individuales de 30 minutos</li>
+          <li>Tratamiento manual personalizado</li>
+          <li>Diagnóstico y plan de recuperación</li>
+          <li>Seguimiento continuo entre sesiones</li>
+        </ul>
+      </div>
+      <div class="serv">
+        <div class="serv-icon">◐</div>
+        <h4>Fisioterapia Digital</h4>
+        <p>El fisioterapeuta mantiene contacto activo con el empleado durante todo el programa.</p>
+        <ul>
+          <li>Videollamadas bajo demanda</li>
+          <li>Diseño de planes personalizados</li>
+          <li>Seguimiento semanal (~10 min/paciente)</li>
+        </ul>
+      </div>
+      <div class="serv">
+        <div class="serv-icon">◑</div>
+        <h4>Formación y Clases</h4>
+        <p>Sesiones formativas y clases grupales para toda la plantilla, presenciales u online.</p>
+        <ul>
+          <li>Charlas de bienvenida y lanzamiento</li>
+          <li>Clases de espalda sana</li>
+          <li>Formación en ergonomía del puesto</li>
+          <li>Sesiones grupales por patología</li>
+        </ul>
+      </div>
+      <div class="serv">
+        <div class="serv-icon">∞</div>
+        <h4>Chat Infinito con tu Fisio</h4>
+        <p>Comunicación ilimitada con tu fisioterapeuta asignado durante todo el programa.</p>
+        <ul>
+          <li>Respuesta en menos de 24 horas</li>
+          <li>Sin límite de mensajes</li>
+          <li>Consultas sobre ejercicios y dolores</li>
+          <li>Seguimiento de tu evolución</li>
+        </ul>
+      </div>
+      <div class="serv">
+        <div class="serv-icon">⎔</div>
+        <h4>Consejos Ergonómicos</h4>
+        <p>Recomendaciones personalizadas para mejorar la postura y el entorno de trabajo.</p>
+        <ul>
+          <li>Evaluación del puesto</li>
+          <li>Consejos por departamento</li>
+          <li>Ejercicios preventivos específicos</li>
+          <li>Seguimiento de mejoras implementadas</li>
+        </ul>
+      </div>
+      <div class="serv" style="background: var(--warner-cream); border: 1px dashed var(--warner-gray-light);">
+        <div class="serv-icon">⬡</div>
+        <h4>Análisis biomecánico continuo</h4>
+        <p>Revisión periódica del gesto en nuevos puestos, atracciones o cambios de operativa.</p>
+        <ul>
+          <li>Grabación y análisis de nuevos riesgos</li>
+          <li>Adaptación del plan al cambio</li>
+          <li>Reporte trimestral a PRL</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- INTERMEDIATE: Todo unido en un ecosistema -->
+    <div style="text-align: center; margin-top: 5rem; padding-top: 3rem; border-top: 1px solid var(--warner-line);">
+      <p style="font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--warner-red); font-weight: 600; margin-bottom: 0.8rem;">Todo unido en un ecosistema</p>
+      <h3 style="font-family: var(--font-display); font-size: clamp(1.8rem, 3.4vw, 2.6rem); color: var(--warner-navy); line-height: 1.05; letter-spacing: 0.005em; max-width: 24ch; margin: 0 auto 0.8rem;">Una plataforma integrada que conecta todos los servicios de salud en un solo lugar.</h3>
+    </div>
+
+    <!-- APP -->
+    <div class="bigblock app">
+      <div class="bigblock-inner">
+        <div class="bigblock-text">
+          <div class="eyebrow">Para TODOS</div>
+          <h3>App con Ecosistema Integrado</h3>
+          <p>Acceso completo al ecosistema Fisify con gamificación integrada para los <strong>1.046 empleados</strong> de Warner — sin importar departamento o turno.</p>
+          <ul>
+            <li>Catálogo de ejercicios (prevención · fuerza · espalda sana)</li>
+            <li>Plan personalizado por puesto</li>
+            <li>Chat directo con fisioterapeuta</li>
+            <li>Videollamada con fisio bajo demanda</li>
+            <li>Agendar cita presencial en el parque</li>
+            <li>Ranking de gamificación con premios mensuales</li>
+          </ul>
+        </div>
+        <div class="bigblock-art app-art" aria-hidden="true">
+          <svg viewBox="0 0 240 460" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="phoneG" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#1B3088"/>
+                <stop offset="100%" stop-color="#0B1845"/>
+              </linearGradient>
+            </defs>
+            <!-- phone frame -->
+            <rect x="20" y="10" width="200" height="440" rx="28" fill="url(#phoneG)" stroke="#FFC72C" stroke-width="3"/>
+            <rect x="32" y="22" width="176" height="416" rx="18" fill="#FAF7F0"/>
+            <!-- header bar -->
+            <rect x="44" y="40" width="80" height="10" rx="2" fill="#0B1845"/>
+            <circle cx="194" cy="45" r="8" fill="#FFC72C"/>
+            <!-- card 1: dolor + ejercicio -->
+            <rect x="44" y="68" width="152" height="78" rx="8" fill="#fff" stroke="#E2E8F0"/>
+            <rect x="54" y="78" width="60" height="6" rx="2" fill="#D52B1E"/>
+            <rect x="54" y="92" width="100" height="10" rx="2" fill="#0B1845"/>
+            <rect x="54" y="108" width="80" height="6" rx="2" fill="#64748B"/>
+            <rect x="54" y="124" width="40" height="14" rx="7" fill="#FFC72C"/>
+            <!-- card 2: chat -->
+            <rect x="44" y="158" width="152" height="90" rx="8" fill="#fff" stroke="#E2E8F0"/>
+            <rect x="54" y="170" width="50" height="6" rx="2" fill="#1B3088"/>
+            <rect x="54" y="186" width="110" height="22" rx="11" fill="#0B1845"/>
+            <rect x="60" y="194" width="80" height="4" rx="2" fill="#FFC72C"/>
+            <rect x="80" y="216" width="110" height="22" rx="11" fill="#FAF7F0" stroke="#E2E8F0"/>
+            <!-- card 3: ranking -->
+            <rect x="44" y="260" width="152" height="88" rx="8" fill="#0B1845"/>
+            <rect x="54" y="272" width="70" height="6" rx="2" fill="#FFC72C"/>
+            <rect x="54" y="286" width="100" height="10" rx="2" fill="#fff"/>
+            <circle cx="64" cy="316" r="8" fill="#FFC72C"/>
+            <rect x="78" y="312" width="80" height="6" rx="2" fill="#fff"/>
+            <rect x="78" y="324" width="50" height="4" rx="2" fill="rgba(255,255,255,0.55)"/>
+            <!-- card 4 -->
+            <rect x="44" y="360" width="152" height="50" rx="8" fill="#FFC72C"/>
+            <rect x="54" y="376" width="80" height="8" rx="2" fill="#0B1845"/>
+            <rect x="54" y="390" width="120" height="6" rx="2" fill="#0B1845" opacity="0.6"/>
+            <!-- bottom indicator -->
+            <rect x="100" y="425" width="40" height="4" rx="2" fill="#0B1845" opacity="0.3"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- INTERMEDIATE: Visibilidad en tiempo real -->
+    <div style="text-align: center; margin-top: 5rem; padding-top: 3rem; border-top: 1px solid var(--warner-line);">
+      <p style="font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--warner-red); font-weight: 600; margin-bottom: 0.8rem;">Visibilidad en tiempo real</p>
+      <h3 style="font-family: var(--font-display); font-size: clamp(1.8rem, 3.4vw, 2.6rem); color: var(--warner-navy); line-height: 1.05; letter-spacing: 0.005em; max-width: 28ch; margin: 0 auto 0.8rem;">Toda la información del programa accesible para PRL y dirección en cualquier momento.</h3>
+    </div>
+
+    <!-- DASHBOARD -->
+    <div class="bigblock dash">
+      <div class="bigblock-inner reverse">
+        <div class="bigblock-text">
+          <div class="eyebrow">RRHH y Dirección</div>
+          <h3>Analítica y Dashboard</h3>
+          <p>RRHH y dirección con la evolución del programa <strong>en tiempo real</strong>. Mismo lenguaje que el informe FREMAP, sin necesidad de traducción.</p>
+          <ul>
+            <li>Panel en tiempo real</li>
+            <li>Informes mensuales por departamento</li>
+            <li>Empleados atendidos y sesiones realizadas</li>
+            <li>Evolución del dolor y adherencia por cohorte</li>
+            <li>Satisfacción (NPS) y feedback abierto</li>
+            <li>Reporte FREMAP-compatible para la mutua</li>
+          </ul>
+        </div>
+        <div class="bigblock-art dash-art" aria-hidden="true">
+          <svg viewBox="0 0 380 260" xmlns="http://www.w3.org/2000/svg">
+            <!-- dashboard frame -->
+            <rect x="10" y="10" width="360" height="240" rx="10" fill="#0B1845"/>
+            <rect x="22" y="22" width="336" height="216" rx="6" fill="#FAF7F0"/>
+            <!-- header -->
+            <rect x="32" y="32" width="100" height="8" rx="2" fill="#0B1845"/>
+            <rect x="32" y="46" width="70" height="6" rx="2" fill="#64748B"/>
+            <circle cx="338" cy="40" r="8" fill="#FFC72C"/>
+            <!-- KPI cards row -->
+            <rect x="32" y="68" width="78" height="56" rx="6" fill="#fff" stroke="#E2E8F0"/>
+            <rect x="40" y="76" width="30" height="5" rx="2" fill="#D52B1E"/>
+            <rect x="40" y="88" width="55" height="14" rx="2" fill="#0B1845"/>
+            <rect x="40" y="108" width="40" height="4" rx="2" fill="#16A34A"/>
+
+            <rect x="118" y="68" width="78" height="56" rx="6" fill="#fff" stroke="#E2E8F0"/>
+            <rect x="126" y="76" width="30" height="5" rx="2" fill="#D52B1E"/>
+            <rect x="126" y="88" width="48" height="14" rx="2" fill="#0B1845"/>
+            <rect x="126" y="108" width="40" height="4" rx="2" fill="#16A34A"/>
+
+            <rect x="204" y="68" width="78" height="56" rx="6" fill="#fff" stroke="#E2E8F0"/>
+            <rect x="212" y="76" width="30" height="5" rx="2" fill="#D52B1E"/>
+            <rect x="212" y="88" width="52" height="14" rx="2" fill="#0B1845"/>
+            <rect x="212" y="108" width="40" height="4" rx="2" fill="#16A34A"/>
+
+            <rect x="290" y="68" width="68" height="56" rx="6" fill="#FFC72C"/>
+            <rect x="298" y="76" width="30" height="5" rx="2" fill="#0B1845"/>
+            <rect x="298" y="88" width="42" height="14" rx="2" fill="#0B1845"/>
+            <rect x="298" y="108" width="34" height="4" rx="2" fill="#0B1845" opacity="0.6"/>
+
+            <!-- chart area -->
+            <rect x="32" y="134" width="200" height="100" rx="6" fill="#fff" stroke="#E2E8F0"/>
+            <rect x="42" y="144" width="56" height="6" rx="2" fill="#0B1845"/>
+            <!-- chart lines (simulated) -->
+            <polyline points="42,210 70,194 100,200 130,170 160,178 190,150 220,140" stroke="#1B3088" stroke-width="2.5" fill="none"/>
+            <polyline points="42,218 70,210 100,212 130,198 160,206 190,188 220,184" stroke="#FFC72C" stroke-width="2.5" fill="none"/>
+            <!-- table on the right -->
+            <rect x="240" y="134" width="118" height="100" rx="6" fill="#fff" stroke="#E2E8F0"/>
+            <rect x="250" y="144" width="60" height="6" rx="2" fill="#0B1845"/>
+            <rect x="250" y="160" width="98" height="4" rx="2" fill="#E2E8F0"/>
+            <rect x="250" y="170" width="98" height="4" rx="2" fill="#E2E8F0"/>
+            <rect x="250" y="180" width="98" height="4" rx="2" fill="#E2E8F0"/>
+            <rect x="250" y="190" width="98" height="4" rx="2" fill="#E2E8F0"/>
+            <rect x="250" y="200" width="98" height="4" rx="2" fill="#E2E8F0"/>
+            <rect x="250" y="210" width="68" height="4" rx="2" fill="#FFC72C"/>
+            <rect x="250" y="220" width="98" height="4" rx="2" fill="#E2E8F0"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+.bigblock { margin-top: 3rem; }
+.bigblock-inner { background: var(--warner-navy); color: #fff; border-radius: var(--radius-lg); padding: clamp(2rem, 4vw, 3rem); display: grid; gap: 2.5rem; grid-template-columns: 1fr; align-items: center; position: relative; overflow: hidden; }
+@media (min-width: 900px) { .bigblock-inner { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 900px) { .bigblock-inner.reverse { direction: rtl; } .bigblock-inner.reverse > * { direction: ltr; } }
+.bigblock-text .eyebrow { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--warner-yellow); font-weight: 600; }
+.bigblock-text h3 { font-family: var(--font-display); font-size: clamp(1.7rem, 3vw, 2.3rem); color: #fff; margin: 0.6rem 0 1rem; letter-spacing: 0.005em; line-height: 1.05; }
+.bigblock-text > p { color: rgba(255,255,255,0.82); font-size: 0.98rem; line-height: 1.6; margin-bottom: 1.2rem; }
+.bigblock-text > p strong { color: var(--warner-yellow); }
+.bigblock-text ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.55rem; }
+.bigblock-text li { font-size: 0.92rem; color: rgba(255,255,255,0.85); line-height: 1.55; padding-left: 1.2rem; position: relative; }
+.bigblock-text li::before { content: '✓'; position: absolute; left: 0; color: var(--warner-yellow); font-weight: 700; }
+.bigblock-art { display: flex; justify-content: center; align-items: center; }
+.bigblock-art svg { width: 100%; height: auto; max-width: 280px; filter: drop-shadow(0 20px 40px rgba(0,0,0,0.35)); }
+.bigblock.dash .bigblock-art svg { max-width: 420px; }
+</style>
+
+<!-- 4. ROADMAP -->
+<section class="roadmap-bg">
+  <div class="container">
+    <p class="section-num">Roadmap</p>
+    <h2 class="section-title">Las 5 fases <span class="y">del programa.</span></h2>
+    <p class="section-lead">Plan estructurado de 4 meses diseñado para maximizar impacto en el pico estival y generar hábitos sostenibles para el resto del año.</p>
+
+    <div class="fases-grid">
+      <article class="fase">
+        <div class="fase-num">0</div>
+        <div class="fase-body">
+          <h3>Preparación</h3>
+          <p>Tener todo listo antes del lanzamiento para maximizar el impacto desde el día 1.</p>
+          <div class="fase-cols">
+            <div class="fase-col">
+              <h5>Decisiones críticas</h5>
+              <ul>
+                <li>Criterios de inclusión con dirección (foco TME)</li>
+                <li>Prioridad: lesión activa · historial MSK · &gt;49 años · refuerzo estival</li>
+                <li>Orden departamentos: 1º Operaciones (atracciones) → 2º Restauración → 3º Mantenimiento</li>
+              </ul>
+            </div>
+            <div class="fase-col">
+              <h5>Comunicación</h5>
+              <ul>
+                <li>Plan de comunicación interno (carteles, emails, intranet, WhatsApp)</li>
+                <li>Coordinación con supervisores como amplificadores</li>
+                <li>Material de bienvenida y onboarding del programa</li>
+              </ul>
+            </div>
+          </div>
+          <span class="fase-tag">Base del éxito</span>
+        </div>
+      </article>
+
+      <article class="fase">
+        <div class="fase-num">1</div>
+        <div class="fase-body">
+          <h3>Lanzamiento</h3>
+          <p>Que los 1.046 empleados conozcan el programa y puedan darse de alta desde el día 1.</p>
+          <div class="fase-cols">
+            <div class="fase-col">
+              <h5>Offline</h5>
+              <ul>
+                <li>Charla de bienvenida del fisioterapeuta en distintos turnos</li>
+                <li>Cartelería en zonas de paso, vestuarios, comedor</li>
+                <li>Mesa de información en zonas de pase</li>
+              </ul>
+            </div>
+            <div class="fase-col">
+              <h5>Online</h5>
+              <ul>
+                <li>Email de presentación a toda la plantilla</li>
+                <li>Publicación en intranet corporativa</li>
+                <li>Comunicación por WhatsApp</li>
+                <li>Arranque de gamificación con premios mensuales</li>
+              </ul>
+            </div>
+          </div>
+          <p style="font-size: 0.88rem; color: var(--warner-gray); margin-top: 0.6rem;"><strong style="color: var(--warner-navy);">Objetivo:</strong> dar de alta a la mayor parte de la plantilla en la app.</p>
+          <div class="fase-tags">
+            <span class="fase-chip">Catálogo de ejercicios</span>
+            <span class="fase-chip">Chat con fisio</span>
+            <span class="fase-chip">Agendar citas</span>
+          </div>
+          <div style="margin-top: 0.8rem;"><span class="fase-tag">Arranque del programa</span></div>
+        </div>
+      </article>
+
+      <article class="fase">
+        <div class="fase-num">2</div>
+        <div class="fase-body">
+          <h3>Evaluación</h3>
+          <p>Diagnosticar a los empleados prioritarios y diseñar su plan personalizado.</p>
+          <div class="fase-cols">
+            <div class="fase-col">
+              <h5>Cada sesión (30 min) incluye</h5>
+              <ul>
+                <li>Diagnóstico físico de la zona más afectada</li>
+                <li>Tratamiento inicial con técnicas manuales</li>
+                <li>Plan personalizado diseñado en el momento</li>
+                <li>Alta en app con seguimiento activado</li>
+              </ul>
+            </div>
+            <div class="fase-col">
+              <h5>En paralelo</h5>
+              <ul>
+                <li>Resto de empleados activos en la app</li>
+                <li>Chat directo con fisio para consultas</li>
+                <li>Participación en gamificación</li>
+              </ul>
+            </div>
+          </div>
+          <div class="fase-tags">
+            <span class="fase-chip">30 min/sesión</span>
+            <span class="fase-chip">6 semanas</span>
+          </div>
+          <div style="margin-top: 0.8rem;"><span class="fase-tag">Diagnóstico individual</span></div>
+        </div>
+      </article>
+
+      <article class="fase">
+        <div class="fase-num">3</div>
+        <div class="fase-body">
+          <h3>Activación</h3>
+          <p>El empleado pasa de "me tratan" a "yo me cuido".</p>
+          <div class="fase-split">
+            <div class="fase-split-card"><div class="pct">50%</div><div class="l">Camilla</div></div>
+            <div class="fase-split-card"><div class="pct">50%</div><div class="l">Ejercicios</div></div>
+          </div>
+          <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.4rem;">
+            <li style="font-size: 0.88rem; color: var(--warner-ink); line-height: 1.5; padding-left: 1rem; position: relative;"><span style="position: absolute; left: 0; color: var(--warner-yellow); font-weight: 700;">·</span>Sesiones individuales activas: el fisio enseña, corrige y supervisa</li>
+            <li style="font-size: 0.88rem; color: var(--warner-ink); line-height: 1.5; padding-left: 1rem; position: relative;"><span style="position: absolute; left: 0; color: var(--warner-yellow); font-weight: 700;">·</span>Evolución natural: cada semana menos camilla, más ejercicios</li>
+            <li style="font-size: 0.88rem; color: var(--warner-ink); line-height: 1.5; padding-left: 1rem; position: relative;"><span style="position: absolute; left: 0; color: var(--warner-yellow); font-weight: 700;">·</span>El empleado ve cómo evoluciona su fuerza y dolor, y coge el hábito</li>
+          </ul>
+          <div style="margin-top: 0.8rem;"><span class="fase-tag">Cambio de mentalidad</span></div>
+        </div>
+      </article>
+
+      <article class="fase">
+        <div class="fase-num">4</div>
+        <div class="fase-body">
+          <h3>Consolidación</h3>
+          <p>Hábitos sostenibles combinando atención individual y grupal antes del pico estival.</p>
+          <div class="fase-cols three">
+            <div class="fase-split-card"><div class="pct">25%</div><div class="l">Camilla · casos críticos</div></div>
+            <div class="fase-split-card"><div class="pct">25%</div><div class="l">Individual · empleados con seguimiento</div></div>
+            <div class="fase-split-card"><div class="pct">50%</div><div class="l">Grupal · 4-6 personas</div></div>
+          </div>
+          <h5 style="font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--warner-red); margin: 1rem 0 0.6rem; font-weight: 600;">Clases grupales por patología</h5>
+          <div class="fase-tags">
+            <span class="fase-chip">Espalda sana</span>
+            <span class="fase-chip">Hombro y cervical</span>
+            <span class="fase-chip">Miembro inferior</span>
+            <span class="fase-chip">Suelo pélvico</span>
+            <span class="fase-chip">Antiestrés</span>
+          </div>
+          <p style="font-size: 0.88rem; color: var(--warner-gray); margin-top: 0.8rem;"><strong style="color: var(--warner-navy);">Beneficio:</strong> cohesión de grupo entre departamentos. Foco en preparación para verano.</p>
+          <div style="margin-top: 0.8rem;"><span class="fase-tag">Hábitos sostenibles</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 5. MÉTRICAS DE ÉXITO -->
+<section class="metricas-bg">
+  <div class="container">
+    <p class="section-num" style="color: var(--warner-yellow);">Objetivos</p>
+    <h2 class="section-title">Métricas <span class="y">de éxito.</span></h2>
+    <p class="section-lead">Retorno de inversión esperado · multiplicador sobre la inversión inicial del piloto.</p>
+
+    <div class="roi-table">
+      <div class="roi-row">
+        <div class="roi-row-left">
+          <div class="when">1 año</div>
+          <h4>Consolidación</h4>
+          <p>-12% absentismo · cohorte tratada</p>
+        </div>
+        <div class="roi-mult">1,8×</div>
+      </div>
+      <div class="roi-row">
+        <div class="roi-row-left">
+          <div class="when">2-3 años</div>
+          <h4>Impacto sostenido</h4>
+          <p>-25% absentismo · cultura preventiva integrada</p>
+        </div>
+        <div class="roi-mult">3,9×</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. INVERSIÓN (Pricing 4 tiers · 4 meses) -->
+<section class="inversion-bg">
+  <div class="container">
+    <p class="section-num">Inversión</p>
+    <h2 class="section-title">Cuatro modalidades <span class="y">de piloto.</span></h2>
+    <p class="section-lead">Misma metodología. La diferencia es la intensidad presencial del fisioterapeuta. Sin permanencia · facturación mensual. Cifras del piloto de 4 meses.</p>
+
+    <div class="tier-grid">
+      <!-- PREMIUM -->
+      <div class="tier-card">
+        <div class="tier-name">Premium</div>
+        <div class="tier-cad">3 días/sem + coaching itinerante</div>
+        <div class="tier-totals">
+          <div><div class="tier-tot-val">26.080 €</div><div class="tier-tot-lbl">Total piloto</div></div>
+          <div><div class="tier-tot-val">4 meses</div><div class="tier-tot-lbl">Duración</div></div>
+        </div>
+        <div class="tier-total-big">6.520 €<small>/ mes</small></div>
+        <div class="tier-feats-h">Qué incluye</div>
+        <ul class="tier-feats">
+          <li>Fisioterapeuta presencial <span class="sub">3 días/semana</span></li>
+          <li>Coaching ergonómico itinerante <span class="sub">Recorre el parque y aconseja en el momento</span></li>
+          <li>4 charlas prácticas/año (1 h) <span class="sub">Hernia · suelo pélvico · estrés</span></li>
+          <li>∞ Videollamadas <span class="sub">Consultas online ilimitadas</span></li>
+          <li>Seguimiento telefónico <span class="sub">~10 min/sem por paciente</span></li>
+          <li>∞ Chat con fisio <span class="sub">Respuesta &lt;24 h</span></li>
+          <li>App Fisify <span class="sub">Acceso para los 1.046 empleados</span></li>
+          <li>Gamificación <span class="sub">Ranking + premios mensuales</span></li>
+          <li>Análisis ergonómico continuo</li>
+          <li>Plan comunicación + Panel reporting</li>
+          <li>Revisión trimestral PRL + dirección</li>
+        </ul>
+      </div>
+
+      <!-- AVANZADO -->
+      <div class="tier-card">
+        <div class="tier-name">Avanzado</div>
+        <div class="tier-cad">3 días / semana</div>
+        <div class="tier-totals">
+          <div><div class="tier-tot-val">21.680 €</div><div class="tier-tot-lbl">Total piloto</div></div>
+          <div><div class="tier-tot-val">4 meses</div><div class="tier-tot-lbl">Duración</div></div>
+        </div>
+        <div class="tier-total-big">5.420 €<small>/ mes</small></div>
+        <div class="tier-feats-h">Qué incluye</div>
+        <ul class="tier-feats">
+          <li>Fisioterapeuta presencial <span class="sub">3 días/semana</span></li>
+          <li>∞ Videollamadas <span class="sub">Consultas online ilimitadas</span></li>
+          <li>Seguimiento telefónico <span class="sub">~10 min/sem por paciente</span></li>
+          <li>∞ Chat con fisio <span class="sub">Respuesta &lt;24 h</span></li>
+          <li>App Fisify <span class="sub">Acceso para los 1.046 empleados</span></li>
+          <li>Gamificación <span class="sub">Ranking + premios mensuales</span></li>
+          <li>Análisis ergonómico <span class="sub">Evaluación de puestos</span></li>
+          <li>Onboarding refuerzo estival</li>
+          <li>Plan comunicación + Panel reporting</li>
+          <li>Cuadro de mando mensual</li>
+        </ul>
+      </div>
+
+      <!-- OPTIMIZADO -->
+      <div class="tier-card">
+        <div class="tier-name">Optimizado</div>
+        <div class="tier-cad">2 días / semana</div>
+        <div class="tier-totals">
+          <div><div class="tier-tot-val">17.520 €</div><div class="tier-tot-lbl">Total piloto</div></div>
+          <div><div class="tier-tot-val">4 meses</div><div class="tier-tot-lbl">Duración</div></div>
+        </div>
+        <div class="tier-total-big">4.380 €<small>/ mes</small></div>
+        <div class="tier-feats-h">Qué incluye</div>
+        <ul class="tier-feats">
+          <li>Fisioterapeuta presencial <span class="sub">2 días/semana</span></li>
+          <li>40 videollamadas/mes <span class="sub">Consultas online</span></li>
+          <li>Seguimiento telefónico <span class="sub">~10 min/sem por paciente</span></li>
+          <li>∞ Chat con fisio <span class="sub">Respuesta &lt;24 h</span></li>
+          <li>App Fisify <span class="sub">Acceso para los 1.046 empleados</span></li>
+          <li>Gamificación <span class="sub">Ranking + premios mensuales</span></li>
+          <li>Análisis ergonómico <span class="sub">Evaluación de puestos</span></li>
+          <li>Foco en camareros sala + operadores atracciones</li>
+          <li>Plan comunicación + Panel reporting</li>
+        </ul>
+      </div>
+
+      <!-- BÁSICO -->
+      <div class="tier-card">
+        <div class="tier-name">Básico</div>
+        <div class="tier-cad">1 día / semana</div>
+        <div class="tier-totals">
+          <div><div class="tier-tot-val">13.080 €</div><div class="tier-tot-lbl">Total piloto</div></div>
+          <div><div class="tier-tot-val">4 meses</div><div class="tier-tot-lbl">Duración</div></div>
+        </div>
+        <div class="tier-total-big">3.270 €<small>/ mes</small></div>
+        <div class="tier-feats-h">Qué incluye</div>
+        <ul class="tier-feats">
+          <li>Fisioterapeuta presencial <span class="sub">1 día/semana</span></li>
+          <li>20 videollamadas/mes <span class="sub">Consultas online</span></li>
+          <li>Seguimiento telefónico <span class="sub">~10 min/sem por paciente</span></li>
+          <li>∞ Chat con fisio <span class="sub">Respuesta &lt;24 h</span></li>
+          <li>App Fisify <span class="sub">Acceso para los 1.046 empleados</span></li>
+          <li>Gamificación <span class="sub">Ranking + premios mensuales</span></li>
+          <li>Foco exclusivo en colectivos diana</li>
+          <li>Plan comunicación + Panel reporting trimestral</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. COMPROMISO -->
+<section class="compromiso-bg">
+  <div class="container">
+    <p class="section-num" style="text-align: center; display: block;">Nuestro compromiso</p>
+    <p class="compromiso-statement">Asumimos toda la responsabilidad para que este proyecto sea un <em>éxito.</em></p>
+    <p class="compromiso-text">No venimos a cumplir un contrato: venimos a dar el 120% para que cada empleado note la diferencia.</p>
+    <p class="compromiso-text" style="margin-top: 1.5rem;">Queremos que <strong style="color: var(--warner-navy);">Parque Warner Madrid</strong> sea un caso de éxito de referencia en bienestar corporativo dentro de Parques Reunidos. Un proyecto del que ambos estemos orgullosos y que marque el estándar en la industria del ocio.</p>
+
+    <div class="compromiso-card">
+      <div class="signature">Equipo Fisify</div>
+      <div class="names">Iñaki Markinez · Laura López</div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <strong>Fisify</strong> · Bienestar corporativo basado en evidencia · Plan de Acción Piloto 4 meses<br>
+    <span style="opacity: 0.55; font-size: 0.78rem; margin-top: 0.5rem; display: inline-block;">
+      En colaboración con Parque Warner Madrid · Cifras FREMAP 2025 · Documento confidencial · 2026
+    </span>
+  </div>
+</footer>
+
+</body>
+</html>
