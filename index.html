@@ -76,9 +76,21 @@ section { padding: clamp(2.5rem, 5.5vw, 4.5rem) 0; position: relative; }
 .diag-kpi .label { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--warner-red); font-weight: 600; }
 .diag-kpi .pct { font-family: var(--font-display); font-size: clamp(2.6rem, 4.5vw, 3.4rem); line-height: 1; color: var(--warner-navy); margin: 0.7rem 0; letter-spacing: 0.005em; }
 .diag-kpi p { font-size: 0.92rem; color: var(--warner-gray); line-height: 1.5; }
-.diag-kpi.placeholder { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 220px; background: repeating-linear-gradient(45deg, rgba(11,24,69,0.04), rgba(11,24,69,0.04) 10px, rgba(11,24,69,0.08) 10px, rgba(11,24,69,0.08) 20px); border: 2px dashed var(--warner-gray-light); }
-.diag-kpi.placeholder .ph-text { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--warner-gray); text-align: center; }
-.diag-kpi.placeholder .ph-icon { font-family: var(--font-display); font-size: 2.5rem; color: var(--warner-gray-light); margin-bottom: 0.5rem; }
+.diag-kpi.space-card { padding: 0; overflow: hidden; display: flex; flex-direction: column; }
+.diag-kpi.space-card .imgs { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; background: var(--warner-cream); }
+.diag-kpi.space-card .imgs img { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: center; display: block; }
+.diag-kpi.space-card .space-body { padding: 1.2rem 1.4rem 1.4rem; flex: 1; display: flex; flex-direction: column; }
+.diag-kpi.space-card .label { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--warner-red); font-weight: 600; margin-bottom: 0.6rem; }
+.diag-kpi.space-card p { font-size: 0.85rem; color: var(--warner-gray); line-height: 1.45; margin-top: 0.4rem; }
+@media (min-width: 1100px) {
+  .diag-kpis { grid-template-columns: repeat(3, 1fr); }
+  .diag-kpi.space-card { grid-column: span 3; }
+  .diag-kpi.space-card { flex-direction: row; align-items: stretch; }
+  .diag-kpi.space-card .imgs { flex: 0 0 56%; grid-template-columns: 1fr 1fr; gap: 4px; }
+  .diag-kpi.space-card .imgs img { aspect-ratio: 4/5; }
+  .diag-kpi.space-card .space-body { flex: 1; padding: 1.6rem 1.8rem; justify-content: center; }
+  .diag-kpi.space-card .pct { font-size: 1.8rem !important; }
+}
 
 .roi-callout { background: var(--warner-navy); color: #fff; border-radius: var(--radius); padding: 1.5rem 1.8rem; margin-top: 2rem; display: grid; gap: 1.2rem; grid-template-columns: 1fr; align-items: center; position: relative; overflow: hidden; }
 @media (min-width: 760px) { .roi-callout { grid-template-columns: 2fr 1fr; } }
@@ -298,9 +310,16 @@ section { padding: clamp(2.5rem, 5.5vw, 4.5rem) 0; position: relative; }
         <div class="pct">100%</div>
         <p>Los supervisores ya son el nodo de bajas, adaptaciones y servicio médico. Vehículo natural para hacer llegar el programa.</p>
       </div>
-      <div class="diag-kpi placeholder">
-        <div class="ph-icon">⌷</div>
-        <div class="ph-text">Espacios y operativa<br><span style="font-size:0.65rem; opacity:0.7;">Imagen del espacio del fisio pendiente</span></div>
+      <div class="diag-kpi space-card">
+        <div class="imgs">
+          <img src="espacio-fisio.jpg" alt="Box 2 · espacio habilitado para fisioterapia en Parque Warner Madrid" />
+          <img src="espacio-fisio-2.jpg" alt="Sala fisio Warner · vista alternativa con cortina y mesa de trabajo" />
+        </div>
+        <div class="space-body">
+          <div class="label">Espacios y operativa</div>
+          <div class="pct" style="font-size: 1.4rem; line-height: 1.05; max-width: 14ch;">Box dedicado y listo</div>
+          <p>Sala "Box 2" equipada con camilla, lámpara y mesa de trabajo. Operativa desde el día 1.</p>
+        </div>
       </div>
     </div>
 
